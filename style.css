@@ -1,0 +1,111 @@
+.xilofone {
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo {
+    width: 900px;
+    height: 600px;
+    background-color: #6c63ff;
+    clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.botoes {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    top: 46%;
+    left: 50%; /* antes era 50%, agora está mais à esquerda */
+    transform: translate(-50%, -50%);
+  }  
+
+.do {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.re {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.mi {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.fa {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.so {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.la {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.si {
+    padding: 10px 20px;
+    height: 620px;
+    width: 80px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: #6c63ff;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #f0f0f0;
+}
