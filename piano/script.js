@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
     };
   
     teclas.forEach(tecla => {
+      // converte as classes da tecla em um array e procura se alguma dessas classes existe no objeto 'estilosEspecificos'
       const nota = Array.from(tecla.classList).find(cls => estilosEspecificos[cls]);
       if (nota) {
         Object.assign(tecla.style, estilosEspecificos[nota]);
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
 
 //! FUNCIONAMENTO DAS TECLAS
 
+// carrega os arquivos de áudio (1 para cada nota musical)
 let Audio_do = new Audio("Notas/c.mp3");
 let Audio_re = new Audio("Notas/d.mp3");
 let Audio_mi = new Audio("Notas/e.mp3");
@@ -108,6 +110,7 @@ let Audio_sol = new Audio("Notas/g.mp3");
 let Audio_la = new Audio("Notas/a.mp3");
 let Audio_si = new Audio("Notas/b.mp3");
 
+// toca os sons
 function toca_do() {
     Audio_do.play();
     Audio_do.currentTime = 0.1;
@@ -138,7 +141,7 @@ function toca_si() {
     Audio_si.currentTime = 0.1;
 }
 
-// Atribuindo eventos de clique aos botões
+// atribuindo eventos de clique as notas (chamam as funções de toca_ quando as teclas são clicadas)
 document.getElementById("c").addEventListener("click", toca_do);
 document.getElementById("d").addEventListener("click", toca_re);
 document.getElementById("e").addEventListener("click", toca_mi);
@@ -147,7 +150,7 @@ document.getElementById("g").addEventListener("click", toca_sol);
 document.getElementById("a").addEventListener("click", toca_la);
 document.getElementById("b").addEventListener("click", toca_si);
 
-// Função de captura de teclas pressionadas no teclado
+// função de captura de teclas pressionadas no teclado (chamam chamam as funções de toca_ quando determinadas teclas do TECLADO do computador são clicadas)
 document.onkeypress = function(evt) {
     var str = keyPressed(evt);
     if(str=='a' || str=='1') toca_do();
@@ -159,7 +162,7 @@ document.onkeypress = function(evt) {
     if(str=='j' || str=='7') toca_si();
 };
 
-// Função para capturar a tecla pressionada
+// função auxiliar para descobrir qual tecla foi pressionada
 function keyPressed(evt) {
     evt = evt || window.event;
     var key = evt.keyCode || evt.which;
