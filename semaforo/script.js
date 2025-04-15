@@ -56,5 +56,5 @@ function iniciar() {
     trocarLuz(); 
     gif.style.display = "block"; // mostra o gif que antes estava escondido
     // setInterval(funçao, tempo) ou seja, funcao = ligar(cor), tempo: 1000 milissegundos (1 segundo)
-  intervalo = setInterval(trocarLuz, 6000) // trocando a cor a cada 1.5 segundos
+  intervalo = setInterval(trocarLuz, 3000) // trocando a cor a cada 1.5 segundos
 }
