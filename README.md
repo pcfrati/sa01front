@@ -1,6 +1,8 @@
 # sa01front
 Primeira atividade somativa de front-end.
 
+OIIIIIIII
+
 # Xilofone Digital Interativo
 
 Este projeto consiste em um xilofone virtual desenvolvido com HTML e JavaScript, com foco em interatividade, estilo visual e usabilidade via mouse e teclado. A proposta principal foi explorar manipulação de DOM, estilização dinâmica e eventos de entrada.
