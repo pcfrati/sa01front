@@ -1,3 +1,11 @@
 body {
-  cursor: pointer;
+  cursor: url('imagens/baqueta.png') 10 10, auto;
+}
+
+.tecla {
+  cursor: url('imagens/baqueta2.png') 10 10, auto;
+}
+
+.tecla:active {
+  cursor: url('imagens/baqueta3.png') 10 10, auto;
 }

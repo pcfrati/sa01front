@@ -1,14 +1,14 @@
 //! ESTILIZAÇÃO
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" faz com que a estilização seja colocada em espera até o HTML ser carregado
   
-    const xilofone = document.querySelector('.xilofone');
-    if (xilofone) {
-      Object.assign(xilofone.style, {
+    const xilofone = document.querySelector('.xilofone');    // usado para selecionar um único elemento no documento HTML (o primeiro que aparecer e for correspondente a classe)
+    if (xilofone) {    // if verifica se o objeto existe
+      Object.assign(xilofone.style, {    // permite modificar as várias propriedades de um memso elemento
         width: "99vw",
         height: "90vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "center",    // coloca todos os elementos no centro do container
         position: "relative"
       });
     }
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         width: "900px",
         height: "600px",
         backgroundColor: "#806851",
-        clipPath: "polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%)",
+        clipPath: "polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%)",    // usado para deixar no formato de trapézio, cada duas porcentagens é um ponto do trapézio, primeiro sua largura e depois altura
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         fontSize: "20px",
         fontWeight: "bold",
         boxShadow: "0 4px #333",
-        cursor: "pointer",
         transition: "transform 0.1s, filter 0.2s, box-shadow 0.2s",
         display: "flex",
         alignItems: "flex-end",
@@ -64,13 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
         border: "4px solid #333"
       });
   
-      tecla.addEventListener("mouseover", () => {
+      tecla.addEventListener("mouseover", () => {    // efeito visual às teclas do xilofone quando o mouse passa sobre elas
         tecla.style.filter = "brightness(1.4)";
         tecla.style.transform = "translateY(4px)";
         tecla.style.boxShadow = "0 0 #000";
       });
   
-      tecla.addEventListener("mouseout", () => {
+      tecla.addEventListener("mouseout", () => {    // efeito visual às teclas do xilofone quando o mouse sai delas
         tecla.style.filter = "";
         tecla.style.transform = "";
         tecla.style.boxShadow = "0 4px #333";
@@ -81,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "do": { backgroundColor: "#FF4136", height: "605px", marginTop: "5px" },
       "re": { backgroundColor: "#FF851B", height: "580px", marginBottom: "10px" },
       "mi": { backgroundColor: "#FFDC00", height: "560px", marginBottom: "20px", color: "#333" },
-      "fa": { backgroundColor: "#2ECC40", height: "540px", marginBottom: "30px" },
-      "so": { backgroundColor: "#0074D9", height: "520px", marginBottom: "40px" },
-      "la": { backgroundColor: "#B10DC9", height: "500px", marginBottom: "50px" },
-      "si": { backgroundColor: "#7FDBFF", height: "480px", marginBottom: "60px", color: "#333" }
+      "fa": { backgroundColor: "#2ECC40", height: "530px", marginBottom: "35px" },
+      "so": { backgroundColor: "#0074D9", height: "500px", marginBottom: "50px" },
+      "la": { backgroundColor: "#B10DC9", height: "470px", marginBottom: "70px" },
+      "si": { backgroundColor: "#7FDBFF", height: "430px", marginBottom: "90px", color: "#333" }
     };
   
     teclas.forEach(tecla => {
