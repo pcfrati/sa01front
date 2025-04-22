@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
   
     const xilofone = document.querySelector('.xilofone');    // usado para selecionar um único elemento no documento HTML (o primeiro que aparecer e for correspondente a classe)
     if (xilofone) {    // if verifica se o objeto existe
-      Object.assign(xilofone.style, {    // permite modificar as várias propriedades de um memso elemento
+      Object.assign(xilofone.style, {    // Object.assign copia todas essas caracteristicas e passa elas para varios elementos
         width: "99vw",
         height: "90vh",
         display: "flex",
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
         width: "900px",
         height: "600px",
         backgroundColor: "#806851",
-        clipPath: "polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%)",    // usado para deixar no formato de trapézio, cada duas porcentagens é um ponto do trapézio, primeiro sua largura e depois altura
+        clipPath: "polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%)",    // usado para deixar no formato de trapézio, cada duas porcentagens é um canto, primeiro sua largura e depois altura
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
   
     const botoes = document.querySelector('.botoes');
     if (botoes) {
-      Object.assign(botoes.style, {
+      Object.assign(botoes.style, {  
         position: "absolute",
         display: "flex",
         alignItems: "flex-end",
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
       });
     }
   
-    const teclas = document.querySelectorAll('.tecla');
+    const teclas = document.querySelectorAll('.tecla');  // chama todos os elementos da classe "tecla" utilizando apenas "tecla" pq uma class pode ter mais de uma palavra para nomea-la
     teclas.forEach(tecla => {
       Object.assign(tecla.style, {
         width: "100px",
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
     });
   
     const estilosEspecificos = {
-      "do": { backgroundColor: "#FF4136", height: "605px", marginTop: "5px" },
+      "do": { backgroundColor: "#FF4136", height: "605px", marginTop: "5px" },   // ao inves de chamar "tecla" chama a segun
       "re": { backgroundColor: "#FF851B", height: "580px", marginBottom: "10px" },
       "mi": { backgroundColor: "#FFDC00", height: "560px", marginBottom: "20px", color: "#333" },
       "fa": { backgroundColor: "#2ECC40", height: "530px", marginBottom: "35px" },
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {    // "DOMContentLoaded" f
       // converte as classes da tecla em um array e procura se alguma dessas classes existe no objeto 'estilosEspecificos'
       const nota = Array.from(tecla.classList).find(cls => estilosEspecificos[cls]);
       if (nota) {
-        Object.assign(tecla.style, estilosEspecificos[nota]);
+        Object.assign(tecla.style, estilosEspecificos[nota]); // se existir, ele aplica a estilização
       }
     });
 });
@@ -113,7 +113,7 @@ let Audio_si = new Audio("Notas/b.mp3");
 // toca os sons
 function toca_do() {
     Audio_do.play();
-    Audio_do.currentTime = 0.1;
+    Audio_do.currentTime = 0.1;  // reinicia o áudio para o tempo 0.1 segundos toda vez que ele for tocado
 }
 function toca_re() {
     Audio_re.play();
@@ -150,9 +150,9 @@ document.getElementById("g").addEventListener("click", toca_sol);
 document.getElementById("a").addEventListener("click", toca_la);
 document.getElementById("b").addEventListener("click", toca_si);
 
-// função de captura de teclas pressionadas no teclado (chamam chamam as funções de toca_ quando determinadas teclas do TECLADO do computador são clicadas)
-document.onkeypress = function(evt) {
-    var str = keyPressed(evt);
+// função de captura de teclas pressionadas no teclado (chamam as funções de toca_ quando determinadas teclas do TECLADO do computador são clicadas)
+document.onkeypress = function(evt) {  // define um evento para quando o usuário pressiona uma tecla no teclado
+    var str = keyPressed(evt); // transforma a tecla pressionada em letra (ou número), armazenando o resultado na variável str
     if(str=='a' || str=='1') toca_do();
     if(str=='s' || str=='2') toca_re();
     if(str=='d' || str=='3') toca_mi();
@@ -164,7 +164,6 @@ document.onkeypress = function(evt) {
 
 // função auxiliar para descobrir qual tecla foi pressionada
 function keyPressed(evt) {
-    evt = evt || window.event;
-    var key = evt.keyCode || evt.which;
-    return String.fromCharCode(key);
+  var key = evt.keyCode // pega o código da tela pressionada e salva na variável
+  return String.fromCharCode(key); // recebe o código numérico da tecla e retorna o caractere correspondente a esse código
 }

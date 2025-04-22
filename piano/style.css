@@ -1,3 +1,4 @@
+
 body {
   cursor: url('imagens/baqueta.png') 10 10, auto;
 }
@@ -6,6 +7,11 @@ body {
   cursor: url('imagens/baqueta2.png') 10 10, auto;
 }
 
+
 .tecla:active {
   cursor: url('imagens/baqueta3.png') 10 10, auto;
 }
+
+
+
+
